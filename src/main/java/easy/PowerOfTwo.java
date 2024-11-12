@@ -3,7 +3,15 @@ package easy;
 public class PowerOfTwo {
     public static void main(String[] args) {
 
-        System.out.println(1/2);
+        System.out.println(powerOfTwo(0));
+        System.out.println(powerOfTwo(1));
+        System.out.println(powerOfTwo(2));
+        System.out.println(powerOfTwo(3));
+        System.out.println(powerOfTwo(5));
+        System.out.println(powerOfTwo(6));
+        System.out.println(powerOfTwo(9));
+        System.out.println(powerOfTwo(16));
+        System.out.println(powerOfTwo(4));
 
     }
 
@@ -27,6 +35,19 @@ public class PowerOfTwo {
 //         100  4
 //        1000  8
 //       10000  16
+
+    public static boolean powerOfTwo(int n) {
+
+        if (n < 1) {
+            return false;
+        }
+
+        while (n > 1 && n % 2 == 0) {
+            n = n / 2;
+        }
+
+        return n == 1;
+    }
 
     public static boolean powerOfTwoStraight(int n) {
         if (n == 1) {
